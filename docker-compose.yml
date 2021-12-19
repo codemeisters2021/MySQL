@@ -1,0 +1,10 @@
+version: "3"
+services:
+    database:
+      image: percona:5.7.20
+      restart: always
+      volumes:
+        - ./.docker/database/data:/var/lib/mysql
+      container_name: database-mysql
+      env_file:
+        - .env

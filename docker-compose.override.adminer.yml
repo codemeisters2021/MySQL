@@ -1,0 +1,14 @@
+version: "3"
+services:    
+    adminer:
+      image: adminer
+      restart: always
+      container_name: dababase-adminer
+      ports:
+        - 8087:8080
+      links:
+        - database
+      depends_on:
+        - database
+      env_file:
+        - .env

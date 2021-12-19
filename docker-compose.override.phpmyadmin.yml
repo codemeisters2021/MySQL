@@ -1,0 +1,14 @@
+version: "3"
+services:    
+    phpmyadmin:
+      image: phpmyadmin
+      restart: always
+      container_name: dababase-phpmyadmin
+      ports:
+        - 8080:80
+      links:
+        - database
+      depends_on:
+        - database
+      env_file:
+        - .env

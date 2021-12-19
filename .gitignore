@@ -1,0 +1,4 @@
+docker-compose.override.yml
+.docker/database/data
+.env
+.idea
