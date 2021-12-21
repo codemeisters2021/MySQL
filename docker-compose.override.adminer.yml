@@ -6,6 +6,9 @@ services:
       container_name: dababase-adminer
       ports:
         - 8087:8080
+      environment:
+        PMA_HOST: database
+        PMA_PORT: 3306
       links:
         - database
       depends_on:
